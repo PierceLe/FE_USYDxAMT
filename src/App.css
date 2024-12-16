@@ -1,0 +1,33 @@
+.banner {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
+  ), url("https://www.sydney.edu.au/content/dam/corporate/ex/images/hero-crop/brand-campaign/v3_group-brand-campaign-hero-imagery.jpg/jcr:content/renditions/cq5dam.web.2000.1000.2x.jpeg") no-repeat center center;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.banner::before{
+  content: "";
+  top :0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter:  blur(100px);
+  z-index: 1;
+  transform: scale(1.1);
+}
+
+.banner > .flex {
+  position: relative;
+  z-index: 2;
+}
